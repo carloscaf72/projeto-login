@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <title>ex025 - mq005</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="sua descrição">
+    <meta name="author" content="noctuaCode">
+    <meta name="keywords" content="palavras chaves">
+    <link rel="shortcut icon" href="../imagens/noctua7-64.png" type="image/png">
+    <!-- Chamadas de Media Queries -->
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Noctua7 </h1>
+        <div id="img-menu" onclick="clickMenu()">
+            <img id="icon-menu" src="./img/list-alt.svg" alt="icon-menu">
+        </div>
+        <menu id="menuItens">
+            <ul>
+                <li><a href="#">opção 1</a></li>
+                <li><a href="#">opção 2</a></li>
+                <li><a href="#">opção 3</a></li>
+                <li><a href="#">opção 4</a></li>
+                <li><a href="#">opção 4</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando </h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores quia non rerum itaque alias earum ab
+                voluptatibus facilis est laudantium, iure officiis quam sequi neque illum! Optio dolor saepe laudantium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum repellendus vitae doloribus qui tenetur
+                porro voluptatum sed laborum corporis. Fugiat modi recusandae voluptate facilis possimus aspernatur
+                voluptas error nisi quam!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perspiciatis expedita voluptatem non
+                exercitationem autem sed consectetur illum doloremque quisquam. Esse odit fugit veniam et quia illum, ex
+                laboriosam commodi.</p>
+        </article>
+
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea animi quasi, molestiae nostrum eius id ut
+                neque eaque rerum provident? Quos fuga voluptatum fugiat doloribus quidem excepturi, ad consectetur
+                dolores.</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati sunt, praesentium quae voluptate ad
+                eligendi laudantium molestiae expedita est, nemo sint! Nam accusamus modi eum delectus unde voluptate
+                asperiores numquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perspiciatis pariatur
+                modi itaque, natus sit distinctio a architecto tempora ab odit, aliquid totam quidem sint corporis
+                officia, illo nam maxime?</p>
+        </article>
+
+    </main>
+
+    <script>
+
+        if (innerWidth >= 768) {
+            menuItens.style.display = 'block';
+        } else {
+            menuItens.style.display = 'none';
+        }
+        let d = null;
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                menuItens.style.display = 'block';
+            } else {
+                menuItens.style.display = d;
+            }
+        }
+
+        function clickMenu() {
+            if (menuItens.style.display == 'block') {
+                menuItens.style.display = 'none';
+                d = 'none';
+            }
+            else {
+                menuItens.style.display = 'block';
+                d = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
